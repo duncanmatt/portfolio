@@ -1,10 +1,16 @@
-import React from 'react'
+
+import {default as Initials} from './assets/initials.svg'
+import { FaHome } from 'react-icons/fa'
 
 function Navbar() {
   return (
-    <div>
-      Navbar
-    </div>
+    <>
+      <header className='pageHeader'>
+        <img src={Initials} alt='initials'/>
+        <button>About</button>
+        <FaHome />
+      </header>
+    </>
   )
 }
 
