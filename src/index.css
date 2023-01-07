@@ -75,18 +75,22 @@ header {
 }
 
 .intro {
+  display: block;
+  align-items: center;
+}
+
+.introContent {
   background: url('/src/layout/assets/lake.svg');
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: 800px;
- 
-  border-radius: 16px;
+  grid-template-rows: 100vw;
+
   
 }
 
 @media (min-width: 950px) {
-  .intro {
-    justify-content: center;
+  .introContent {
+    justify-self: center;
   }
 }
 

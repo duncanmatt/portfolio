@@ -17,13 +17,13 @@ function Intro() {
 
 
   return (
-    <>
-      <div className='intro'>
-      {isDesktop && <p>this is DESKTOP</p>}
-      {/* {isTablet && <p>this is TABLET</p>} */}
-      {isMobile && <p>this is MOBILE</p>}
+    <div className='intro'>
+      <div className='introContent'>
+        {isDesktop && <p>this is DESKTOP</p>}
+        {/* {isTablet && <p>this is TABLET</p>} */}
+        {isMobile && <p>this is MOBILE</p>}
+      </div>
     </div>
-    </>
     
     
     
