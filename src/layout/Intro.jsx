@@ -1,27 +1,29 @@
 
-
 import { useMediaQuery } from 'react-responsive';
-import {default as LakePic} from './assets/lake.svg';
-import IntroBackground from '../components/IntroBackground';
+import SkillsMobile from '../components/SkillsMobile';
+import SkillsDesktop from '../components/SkillsDesktop';
 
-
-
-// style={{backgroundImage: `url(${LakePic}`}}
 
 function Intro() {
+  // change introSkills grid depending on viewport
   const isDesktop = useMediaQuery({ query: '(min-width: 1000px)' })
 
-  const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
- 
 
+
+
+ 
 
 
   return (
     <div className='intro'>
-      <div className='introContent'>
-        {isDesktop && <p>this is DESKTOP</p>}
-        {/* {isTablet && <p>this is TABLET</p>} */}
-        {isMobile && <p>this is MOBILE</p>}
+      <div className='introContentBG'>
+        <div className='introContent'>
+          <h3 className="briefAbout">
+            Hello! I'm Matt Duncan, a self-taught React developer currently located in northern Virginia.
+          </h3>
+          {isDesktop ? <SkillsDesktop /> : <SkillsMobile /> }
+
+        </div>
       </div>
     </div>
     

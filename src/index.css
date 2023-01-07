@@ -1,6 +1,7 @@
 :root {
-  --main-color: #f7f7f2;
+  --primary-color: #f7f7f2;
   --secondary-color: #252e11;
+  --alternate-color: rgba(209, 115, 52, .99);
   --header-color: rgba(35, 46, 17, .30);
   --dark-font: rgba(51, 51, 51 99%);
 }
@@ -11,12 +12,13 @@
 
 body {
   margin: 0;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   font-family: 'Barlow', sans-serif;
+
 }
 
 header {
@@ -62,36 +64,50 @@ header {
 }
 
 
-.aboutBtn  {
-  border: none;
-  background: none;
-  border-radius: 24px;
-  padding: 1rem;
-  font-size: 1.4rem;
-}
-
-.aboutBtn:hover {
-  background: var(--secondary-color);
-}
-
 .intro {
   display: block;
-  align-items: center;
+  font-size: 1.5rem;
 }
 
-.introContent {
+.introContentBG {
   background: url('/src/layout/assets/lake.svg');
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 100vw;
-
-  
 }
 
 @media (min-width: 950px) {
-  .introContent {
+  .introContentBG {
     justify-self: center;
   }
+}
+
+.introContent {
+  display: grid;
+  grid-template-columns: .5fr .5fr;
+  gap: 2rem;
+}
+
+.briefAbout {
+  color: white;
+  margin: 1rem;
+  
+}
+
+.introSkills {
+  display: grid;
+  margin: 2rem;
+}
+
+.skillCard {
+  
+  background-color: var(--alternate-color);
+
+  padding: 1rem;
+  border-radius: 14px;
+  color: var(--secondary-color);
+  
+  
 }
 
 
