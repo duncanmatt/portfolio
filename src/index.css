@@ -46,7 +46,7 @@ header {
   justify-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .pageHeader > .headerName {
     display: none;
   }
@@ -63,50 +63,45 @@ header {
   margin-right: 1.6rem;
 }
 
-
 .intro {
   display: block;
-  font-size: 1.5rem;
+  height: 687px;
 }
 
 .introContentBG {
   background: url('/src/layout/assets/lake.svg');
   background-repeat: no-repeat;
-  display: grid;
-  grid-template-rows: 100vw;
-}
-
-@media (min-width: 950px) {
-  .introContentBG {
-    justify-self: center;
-  }
+  height: 687px;
+  
 }
 
 .introContent {
   display: grid;
-  grid-template-columns: .5fr .5fr;
-  gap: 2rem;
 }
 
 .briefAbout {
   color: white;
-  margin: 1rem;
+  margin: 2rem;
   
+  font-weight: 700;
 }
 
 .introSkills {
-  display: grid;
-  margin: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1.6rem;
+  
 }
 
 .skillCard {
-  
+  font-weight: bold;
   background-color: var(--alternate-color);
-
-  padding: 1rem;
-  border-radius: 14px;
+  text-align: center;
+  padding: .6rem;
+  border-radius: 6px;
+  box-shadow: #c0392b 0px 3px, var(--secondary-color) 0px 4px 6px;
   color: var(--secondary-color);
-  
   
 }
 

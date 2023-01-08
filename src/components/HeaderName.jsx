@@ -3,8 +3,8 @@ import { useMediaQuery } from "react-responsive"
 function HeaderName() {
 
 
-  const isBigScreen = useMediaQuery({ query: '(min-width: 1000px)' })
-  const isTablet = useMediaQuery({ query: '(max-width: 1000px)'})
+  const isBigScreen = useMediaQuery({ query: '(min-width: 1200px)' })
+  const isTablet = useMediaQuery({ query: '(max-width: 1200px)'})
 
 
   return (
