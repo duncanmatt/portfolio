@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -36,7 +36,7 @@ header {
 }
 
 .pageHeader > .headerName {
-  font-family: 'Emblema One', cursive;
+  font-family: 'Fascinate', cursive;
   font-size: 1.6rem;
   margin-left: 4rem;
 }
@@ -51,7 +51,7 @@ header {
     display: none;
   }
   .pageHeader > .headerInitials {
-    margin-left: 1rem;
+    margin-inline-start: 2rem;
   }
 }
 
@@ -68,22 +68,17 @@ header {
   height: 687px;
 }
 
-.introContentBG {
-  background: url('/src/layout/assets/lake.svg');
-  background-repeat: no-repeat;
-  height: 687px;
-  
-}
-
 .introContent {
   display: grid;
+  height: 687px;
+  width: inherit;
+  background: url('/src/layout/assets/lake.svg');
 }
 
 .briefAbout {
-  color: white;
-  margin: 2rem;
-  
-  font-weight: 700;
+  color: rgba(245, 245, 245, .99);
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .introSkills {
@@ -91,10 +86,23 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   line-height: 1.6rem;
-  
+  place-self: center;
+  margin-inline: 4rem;
 }
 
-.skillCard {
+@media (min-width: 1800px) {
+  .introSkills {
+    margin-inline: 6rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .introSkills {
+    margin-inline: 10px;
+  }
+}
+
+.skillBadge {
   font-weight: bold;
   background-color: var(--alternate-color);
   text-align: center;
@@ -102,7 +110,10 @@ header {
   border-radius: 6px;
   box-shadow: #c0392b 0px 3px, var(--secondary-color) 0px 4px 6px;
   color: var(--secondary-color);
-  
 }
 
+.card {
+  position: relative;
+  background-color: rgba(245, 245, 245, .99);
+}
 

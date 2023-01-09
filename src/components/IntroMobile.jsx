@@ -1,42 +1,47 @@
 import React from 'react'
-import ContentCard from './shared/ContentCard'
+import Badge from './shared/Badge'
 
 function SkillsMobile() {
+
+  const title = `
+    Hello! I'm Matt Duncan, a self-taught React developer currently in northern Virginia but prepared to relocate.
+  `
+
   return (
     <div 
       className='introContent'
       style={{
-        gridTemplateRows: 'min-content 1fr',
+        gridTemplateRows: 'repeat(2, 1fr)',
         
       }}
     >
-      <div>
         <p 
           className='briefAbout'
           style={{
-            fontSize: '1.8rem',
-            
+            fontSize: 'clamp(24px, 2.6rem, 36px)',
+            marginInlineStart: '2rem',
+            marginInlineEnd: '1rem',
+            marginBlockStart: '3rem'
           }}  
         >
-          
-          Hello! I'm Matt Duncan, a self-taught React developer currently
-          located in northern Virginia.
+          {title}
         </p>
-      </div>
-
       <div
         className='introSkills'
         style={{
-          alignSelf: 'flex-start',
-          rowGap: '1rem',
-          columnGap: '.5rem'
+          rowGap: '20px',
+          columnGap: '1rem',
+          
+          alignContent: 'space-between',
+          fontSize: '1.6rem'
         }}>
-        <ContentCard skill='HTML' />
-        <ContentCard skill='CSS' />
-        <ContentCard skill='JavaScript' />
-        <ContentCard skill='React' />
-        <ContentCard skill='Node' />
-        <ContentCard skill='Figma' />
+        <Badge skill='HTML' />
+        <Badge skill='CSS' />
+        <Badge skill='JavaScript' />
+        <Badge skill='DSA' />
+        <Badge skill='React' />
+        <Badge skill='Node' />
+        <Badge skill='Figma' />
       </div>
     </div>
   );

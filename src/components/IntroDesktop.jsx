@@ -1,41 +1,47 @@
 
-import ContentCard from './shared/ContentCard'
+import Badge from './shared/Badge'
 
 function SkillsDesktop() {
+  const title = `
+    Hello! I'm Matt Duncan, a self-taught React developer currently located in northern Virginia but prepared to relocate.
+  `
+
   return (
     <div
       className='introContent'
       style={{
-        gridTemplateColumns: 'repeat(2, .5fr)',
-        justifyItems: 'center',
-        gap: '2rem',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gap: '2rem'
       }}
     >
       <h2
         className='briefAbout'
         style={{
-          fontSize: '2rem',
-          fontWeight: 'normal',
-          marginTop: '2.4rem'
+          
+          fontSize: '3rem',
+          marginInlineStart: '2rem',
+          marginBlockStart: '2rem'
         }}
       >
-        Hello! I'm Matt Duncan, a self-taught React developer currently located
-        in northern Virginia.
+       {title}
       </h2>
       <div
         className='introSkills'
         style={{
-          alignContent: 'center',
-          rowGap: '2rem',
-          columnGap: '1rem',
-          fontSize: '1.6rem',
+          placeSelf: 'center',
+          
+          alignContent: 'space-evenly',
+          rowGap: '1.75rem',
+          columnGap: '1.99rem',
+          fontSize: '2rem',
         }}>
-        <ContentCard skill='HTML' />
-        <ContentCard skill='CSS' />
-        <ContentCard skill='JavaScript' />
-        <ContentCard skill='React' />
-        <ContentCard skill='Node' />
-        <ContentCard skill='Figma' />
+        <Badge skill='HTML' />
+        <Badge skill='CSS' />
+        <Badge skill='JavaScript' />
+        <Badge skill='DSA' />
+        <Badge skill='React' />
+        <Badge skill='Node' />
+        <Badge skill='Figma' />
       </div>
     </div>
   );

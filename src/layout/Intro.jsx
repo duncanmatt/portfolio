@@ -6,7 +6,7 @@ import IntroDesktop from '../components/IntroDesktop';
 
 function Intro() {
   // change introSkills grid depending on viewport
-  const isDesktop = useMediaQuery({ query: '(min-width: 600px)' })
+  const isDesktop = useMediaQuery({ query: '(min-width: 800px)' })
 
 
 
@@ -16,13 +16,8 @@ function Intro() {
   
   return (
     <div className='intro'>
-      <div className='introContentBG'>
         {isDesktop ? <IntroDesktop /> : <IntroMobile /> }
-      </div>
     </div>
-    
-    
-    
   )
 }
 
