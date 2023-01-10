@@ -1,9 +1,10 @@
 :root {
-  --primary-color: #f7f7f2;
+  --primary-color: #000;
   --secondary-color: #252e11;
   --alternate-color: rgba(209, 115, 52, .99);
   --header-color: rgba(35, 46, 17, .30);
   --dark-font: rgba(51, 51, 51 99%);
+  --shade-color: rgba(153, 153, 153, 0.3);
 }
 
 * {
@@ -12,7 +13,7 @@
 
 body {
   margin: 0;
-  background-color: var(--primary-color);
+  background-color: #f7f7f2;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -112,8 +113,27 @@ header {
   color: var(--secondary-color);
 }
 
-.card {
+.cardWrapper {
+  display: block;
+  width: minmax(420px, 290px);
+  height: 300px;
   position: relative;
-  background-color: rgba(245, 245, 245, .99);
+  background-color: var(--shade-color);
+  border-radius: 4px;
+  
 }
+
+.latest {
+  margin: .5rem;
+}
+
+.projCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktopCarousel {
+  flex-wrap: wrap;
+}
+
 

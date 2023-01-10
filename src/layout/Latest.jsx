@@ -1,13 +1,19 @@
-import React from 'react'
-import ProjectCard from '../components/ProjectCard'
+
+import LatestMobile from '../components/LatestMobile';
+import LatestDesktop from '../components/LatestDesktop';
+import { useMediaQuery } from 'react-responsive';
 
 function Latest() {
-  return (
-    <div>
-      <h2>Latest</h2>
-      <ProjectCard title='GitHub Finder' />
-    </div>
-  )
+
+  
+  
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
+  return <div className="latest">
+    {isMobile && <LatestMobile />}
+    {!isMobile && <LatestDesktop />}
+  </div> 
+  
 }
 
-export default Latest
+export default Latest;
