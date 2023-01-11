@@ -115,11 +115,11 @@ header {
 
 .cardWrapper {
   display: block;
-  width: 300px;
-  height: 333px;
+  width: 320px;
+  height: 420px;
   position: relative;
   background-color: var(--shade-color);
-  border-radius: 6px;
+  box-shadow: rgba(48, 48, 48, 0.25) 0px 1px 9px -5px;
 
 }
 
@@ -129,6 +129,7 @@ header {
   position: relative;
   font-weight: 400;
   margin-block-start: 1rem;
+  min-height: 500px;
 }
 
 
@@ -142,36 +143,49 @@ header {
 
 .carousel {
   display: grid;
-  grid-template-rows: 500px;
-  grid-template-columns: min-content 75vw min-content;
-  
+  grid-auto-flow: column;
+  align-items: center;
+  min-height: inherit;
 }
 
 .carouselBackBtn {
+  height: fit-content;
   grid-column: 1;
-  grid-row: 1;
+  z-index: 1;
 }
 
-.carousel > div {
+.carousel .slider {
+  justify-self: center;
+  margin-block: 1rem;
+  display: block;
+  width: 320px;
+  height: 420px;
   grid-column: 2;
-  grid-row: 1;
-  max-height: 500px;
+  scroll-snap-align: center;
+  border-radius: 4px;
 }
 
 .carouselNextBtn {
   grid-column: 3;
-  grid-row: 1;
+  height: fit-content;
+ 
+  z-index: 1;
 }
 
-.carousel > div > div > div {
-  display: flex;
-  align-items: stretch;
-  max-height: 500px;
+.carousel .cardWrapper {
+  
+}
+
+
+.cardWrapper .projCard {
+  border-radius: 16px;
 }
 
 .projCard {
   display: flex;
   flex-direction: column;
+  height: 420px;
+  border-radius: 4px;
 }
 
 .projCard > strong {
@@ -179,6 +193,8 @@ header {
   margin-top: 4px;
   color: var(--secondary-color);
 }
+
+
 
 
 

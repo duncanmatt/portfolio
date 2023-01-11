@@ -1,4 +1,5 @@
 import ProjectCard from './ProjectCard';
+import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
 
 function LatestDesktop() {
   const items = [
@@ -6,6 +7,7 @@ function LatestDesktop() {
       id: 1,
       title: 'GitHub Finder',
       desc: 'description',
+      pic: `${ghFinderPreview}`,
     },
     {
       id: 2,

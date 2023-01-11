@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 function Card({children}) {
   return (
-    <div className='cardWrapper' >
+    <div style={{
+      marginRight: '1rem'
+    }} className='cardWrapper' >
       {children}
     </div>
   )
