@@ -120,9 +120,7 @@ header {
   position: relative;
   background-color: var(--shade-color);
   border-radius: 6px;
-  margin-inline: 1rem;
-  scroll-snap-align: center;
-  scroll-margin-inline: 1rem;
+
 }
 
 .latest {
@@ -131,8 +129,9 @@ header {
   position: relative;
   font-weight: 400;
   margin-block-start: 1rem;
-  
 }
+
+
 
 .latest-lg {
   display: flex;
@@ -141,15 +140,33 @@ header {
   row-gap: 1rem;
 }
 
-.mobileLatestWrapper {
-  display: block;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  height: 400px;
+.carousel {
+  display: grid;
+  grid-template-rows: 500px;
+  grid-template-columns: min-content 75vw min-content;
+  
 }
 
-.mobileLatestWrapper .carouselWrapper {
-  flex-direction: r;
+.carouselBackBtn {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.carousel > div {
+  grid-column: 2;
+  grid-row: 1;
+  max-height: 500px;
+}
+
+.carouselNextBtn {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.carousel > div > div > div {
+  display: flex;
+  align-items: stretch;
+  max-height: 500px;
 }
 
 .projCard {

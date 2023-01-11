@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Card from './shared/Card';
 import DSAPic from '../layout/assets/dsa.jpg'
 
-function ProjectCard({ title, desc, pic }) {
+function ProjectCard({ project: {title, desc, pic} }) {
   return (
     <Card>
       <div className='projCard'>
@@ -23,8 +23,7 @@ ProjectCard.defaultProps = {
 };
 
 ProjectCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
+  project: PropTypes.object.isRequired
 };
 
 export default ProjectCard;
