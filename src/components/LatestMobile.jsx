@@ -3,8 +3,11 @@ import ProjectCard from './ProjectCard';
 
 function LatestMobile() {
   return (
-    <div className='mobileCarousel'>
-      <Carousel>
+    <div className='latest-carousel'>
+      <Carousel
+        height={400}
+        width={300}
+        slides={1}>
         <ProjectCard
           title='GitHub Finder'
           desc='description'

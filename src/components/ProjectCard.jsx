@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Card from './shared/Card';
-import Topography from '../layout/assets/topography.svg';
+import DSAPic from '../layout/assets/dsa.jpg'
 
 function ProjectCard({ title, desc, pic }) {
   return (
@@ -19,7 +19,7 @@ function ProjectCard({ title, desc, pic }) {
 }
 
 ProjectCard.defaultProps = {
-  pic: `${Topography}`,
+  pic: `${DSAPic}`,
 };
 
 ProjectCard.propTypes = {

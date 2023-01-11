@@ -7,9 +7,10 @@ function Latest() {
 
   
   
-  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
 
   return <div className="latest">
+    <h2>Latest Work</h2>
     {isMobile && <LatestMobile />}
     {!isMobile && <LatestDesktop />}
   </div> 

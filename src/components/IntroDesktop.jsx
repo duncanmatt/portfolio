@@ -3,7 +3,7 @@ import Badge from './shared/Badge'
 
 function SkillsDesktop() {
   const title = `
-    Hello! I'm Matt Duncan, a self-taught React developer currently located in northern Virginia but prepared to relocate.
+    Hello! I'm Matt Duncan, a self-taught React developer from northern Virginia.
   `
 
   return (
