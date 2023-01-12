@@ -124,7 +124,6 @@ header {
 .latest {
   display: block;
   text-rendering: optimizeLegibility;
-  position: relative;
   font-weight: 400;
   margin-block-start: 1rem;
   min-height: 500px;
@@ -149,50 +148,47 @@ header {
   column-gap: 1rem
 }
 
-.carouselWrapper {
-  width: 100vw;
-  display: flex;
-  height: 500px;
-  padding-inline: 64px;
-}
 
 .carousel {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 420px;
-  grid-auto-flow: column;
+  overflow: hidden;
+  position: relative;
 }
 
-.carousel button svg {
-
-}
-
-.carouselBackBtn {
-  grid-column: 1;
-  z-index: 1;
-
-}
-
-.carousel .slider {
+.carouselInner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  margin-block: 1rem;
-  display: block;
-  width: 320px;
-  height: 420px;
-  grid-column: 2;
-  scroll-snap-align: center;
-  border-radius: 4px;
+  width: 100%;
 }
 
+.carouselItem {
+  display: none;
+}
 
-.carouselNextBtn {
-  grid-column: 3;
-  z-index: 1;
+.carouselItemActive {
+  
+}
+
+.carousel button img {
+  opacity: 25%;
+}
+
+.carouselPrev {
+  position: absolute;
+  top: 50%;
+  padding-left: 15px;
+}
+
+.carouselNext {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  padding-right: 25px;
 }
 
 .carousel .cardWrapper {
   border-radius: 4px;
-
 }
 
 
