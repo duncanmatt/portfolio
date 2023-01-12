@@ -1,15 +1,15 @@
-
 import Carousel from './shared/Carousel';
 
 function LatestMobile() {
   return (
+    <div className='carouselWrapper'>
       <Carousel
-        width={320}
+        width={329}
         height={420}
         slides={5}
         slidesShown={1}
       />
-    
+    </div>
   );
 }
 

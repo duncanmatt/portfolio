@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard';
 import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
+import fbAppPreview from '../layout/assets/fbAppPreview.png'
 
 function LatestDesktop() {
   const items = [
@@ -13,11 +14,13 @@ function LatestDesktop() {
       id: 2,
       title: "Marcus' Fullstack",
       desc: 'description',
+      pic: ''
     },
     {
       id: 3,
       title: 'Feedback App',
       desc: 'description',
+      pic: `${fbAppPreview}`
     },
     {
       id: 4,
