@@ -10,7 +10,7 @@ function LatestMobile() {
 		{
 			id: 1,
 			title: 'GitHub Finder',
-			desc: 'description',
+			desc: 'Search for GitHub profiles using axios and the GitHub API, styles with tailwind and DaisyUI',
 			pic: `${ghFinderPreview}`,
 		},
 		{
@@ -31,8 +31,8 @@ function LatestMobile() {
 		},
 		{
 			id: 5,
-			title: "Kalin's fullstack",
-			desc: 'eCommerce website made with React and Express',
+			title: "House Marketplace",
+			desc: 'React app for posting or viewing real estate listings that are stored with firebase',
 		},
 	];
 

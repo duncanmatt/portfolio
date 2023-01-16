@@ -228,6 +228,15 @@ header {
   padding-inline: 64px;
 }
 
+.certified-lg {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem
+}
+
 .contact {
   background-color: rgb(245, 245, 245);
   padding-block: 1rem;
@@ -272,6 +281,8 @@ header {
   display: flex;
   flex-flow: column;
   text-align: center;
+  margin-block: 20px;
+
 }
 
 

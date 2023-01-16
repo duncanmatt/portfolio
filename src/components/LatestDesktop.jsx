@@ -13,30 +13,30 @@ function LatestDesktop() {
     {
       id: 2,
       title: "Marcus' Fullstack",
-      desc: 'description',
+      desc: 'eCommerce website made with React and Express',
       pic: ''
     },
     {
       id: 3,
       title: 'Feedback App',
-      desc: 'description',
+      desc: 'React app for leaving reviews that are stored with firebase',
       pic: `${fbAppPreview}`
     },
     {
       id: 4,
-      title: 'Fullstack MERN App',
-      desc: 'description',
+      title: 'MERN Support App',
+      desc: 'MongoDB, Express, React, Node.js',
     },
     {
       id: 5,
-      title: "Kalin's fullstack",
-      desc: 'description',
+      title: "House Marketplace",
+      desc: 'React app for posting or viewing real estate listings that are stored with firebase',
     },
   ];
 
   return (
     <div className='latest-lg'>
-      {items.map(item => (
+      {items.map((item) => (
           <ProjectCard key={item.id} project={item} />
       ))}
     </div>
