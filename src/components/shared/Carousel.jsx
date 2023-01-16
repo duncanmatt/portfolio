@@ -1,68 +1,52 @@
-import PropTypes from 'prop-types'
+import { useState } from 'react';
 
-import ProjectCard from '../ProjectCard'
-import PrevBtn from '../../layout/assets/carouselPrev.png'
-import NextBtn from '../../layout/assets/carouselNext.png'
+import ProjectCard from '../ProjectCard';
+import CertCard from '../CertCard';
 
-import { useState } from 'react'
+import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 
+function Carousel({ items }) {
+	const [activeItem, setActiveItem] = useState(1);
 
+	const nextItem = () => {
+		setActiveItem(activeItem === items.length ? 1 : activeItem + 1);
+	};
 
-function Carousel({items}) {
-  const [activeItem, setActiveItem] = useState(1)
-  
+	const prevItem = () => {
+		setActiveItem(activeItem === 1 ? items.length : activeItem - 1);
+	};
 
-  const nextItem = () => {
-    setActiveItem(activeItem === 5 ? 1 : activeItem + 1)
-  }
-
-  const prevItem = () => {
-    setActiveItem(activeItem === 1 ? 5 : activeItem - 1)
-  }
-
-  // const btnDisable = () => {
-  //   if ((activeItem === 1) || ())
-  // }
-  
-
-  return (
-    <div className='carousel'>
-      <div className='carouselInner'>
-        {items.map((item) => (
-          <div
-            className={
-              (item.id !== activeItem ? 'carouselItem' : 'carouselItemActive')
-            }>
-            <ProjectCard
-              key={item.id}
-              project={item}
-            />
-          </div>
-        ))}
-      </div>
-      <button
-        className='carouselPrev'
-        onClick={prevItem}
-      >
-      
-        <img
-          src={PrevBtn}
-          alt='previous'
-        />
-      </button>
-      <button
-        className='carouselNext'
-        onClick={nextItem}
-        >
-        <img
-          src={NextBtn}
-          alt='next'
-        />
-      </button>
-    </div>
-  )
+	return (
+		<div className='carousel'>
+			<div className='carouselInner'>
+				{items.map(item => (
+					<div
+						key={item.id}
+						className={
+							item.id !== activeItem ? 'carouselItem' : 'carouselItemActive'
+						}>
+						{items.length === 5 ? (
+							<ProjectCard project={item} />
+						) : (
+							<CertCard cert={item} />
+						)}
+					</div>
+				))}
+			</div>
+			<button
+				className='carouselPrev'
+				onClick={prevItem}>
+				<LeftOutlined />
+			</button>
+			<button
+				className='carouselNext'
+				onClick={nextItem}>
+				<RightOutlined />
+			</button>
+		</div>
+	);
 }
 
-Carousel.propTypes = {}
+Carousel.propTypes = {};
 
-export default Carousel
+export default Carousel;
