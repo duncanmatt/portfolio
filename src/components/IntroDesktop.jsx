@@ -9,8 +9,8 @@ function SkillsDesktop() {
 		<div
 			className='introContent'
 			style={{
-				gridTemplateColumns: 'repeat(2, 1fr)',
-				gap: '2rem',
+				gridTemplateColumns: 'repeat(1, 1fr)',
+				textAlign: 'center',
 			}}>
 			<h2
 				className='briefAbout'
@@ -22,24 +22,6 @@ function SkillsDesktop() {
 				{title}
 			</h2>
 		
-				<div
-					className='introSkills'
-					style={{
-						placeSelf: 'center',
-
-						alignContent: 'space-evenly',
-						rowGap: '1.75rem',
-						columnGap: '1.99rem',
-						fontSize: '2rem',
-					}}>
-					<Badge skill='HTML' />
-					<Badge skill='CSS' />
-					<Badge skill='JavaScript' />
-					<Badge skill='DSA' />
-					<Badge skill='React' />
-					<Badge skill='Node' />
-					<Badge skill='Figma' />
-				</div>
 		
 		</div>
 	);

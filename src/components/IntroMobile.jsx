@@ -10,7 +10,7 @@ function SkillsMobile() {
 		<div
 			className='introContent'
 			style={{
-				gridTemplateRows: 'repeat(2, 1fr)',
+				gridTemplateRows: 'repeat(1, 1fr)',
 			}}>
 			<p
 				className='briefAbout'
@@ -22,23 +22,7 @@ function SkillsMobile() {
 				}}>
 				{title}
 			</p>
-				<div
-					className='introSkills'
-					style={{
-						rowGap: '20px',
-						columnGap: '1rem',
-
-						alignContent: 'space-between',
-						fontSize: '1.6rem',
-					}}>
-					<Badge skill='HTML' />
-					<Badge skill='CSS' />
-					<Badge skill='JavaScript' />
-					<Badge skill='DSA' />
-					<Badge skill='React' />
-					<Badge skill='Node' />
-					<Badge skill='Figma' />
-				</div>
+				
 		
 		</div>
 	);

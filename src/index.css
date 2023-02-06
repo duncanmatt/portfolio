@@ -1,288 +1,276 @@
 :root {
-  --primary-color: #000;
-  --secondary-color: #252e11;
-  --alternate-color: rgba(209, 115, 52, .99);
-  --header-color: rgba(35, 46, 17, .30);
-  --dark-font: rgba(51, 51, 51 99%);
-  --light-font: rgb(153, 153, 153);
+	--primary-color: #000;
+	--secondary-color: #252e11;
+	--alternate-color: rgba(209, 115, 52, 0.99);
+	--header-color: rgba(35, 46, 17, 0.3);
+	--dark-font: rgba(51, 51, 51 99%);
+	--light-font: rgb(153, 153, 153);
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background-color: hsl(79, 46%, 99%);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.4;
+	margin: 0;
+	background-color: hsl(79, 46%, 99%);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.4;
 }
 
 header {
-  display: block;
-  height: 100px;
-  background-color: var(--header-color);
+	display: block;
+	height: 100px;
+	background-color: var(--header-color);
 }
 
-.pageHeader  {
-  display: grid;
-  grid-template-rows: 100px;
-  grid-template-columns: 1fr min-content 1fr;
-  align-items: center;
-  color: #252e11;
+.pageHeader {
+	padding-inline: 3rem;
+	display: grid;
+	grid-template-rows: 100px;
+	grid-template-columns: 1fr min-content 1fr;
+	align-items: center;
+	color: #252e11;
 }
 
 .pageHeader > .headerName {
-  font-family: 'Fascinate', cursive;
-  font-size: 1.6rem;
-  margin-left: 4rem;
+	font-family: 'Fascinate', cursive;
+	font-size: 2rem;
 }
 
 .pageHeader > .mid {
-  grid-column: 2;
-  justify-items: center;
+	grid-column: 2;
+	justify-items: center;
 }
 
 @media (max-width: 750px) {
-  .pageHeader > .headerName {
-    display: none;
-  }
-  .pageHeader > .headerInitials {
-    margin-inline-start: 2rem;
-  }
+	.pageHeader > .headerName {
+		display: none;
+	}
 }
 
 .pageHeader > .right {
-  grid-column: 3;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-right: 1.6rem;
+	grid-column: 3;
+	display: inline-flex;
+	justify-content: space-around;
+	padding-inline: 1rem 0;
+	align-self: right;
 }
 
 .intro {
-  display: block;
-  height: 687px;
+	display: block;
+	padding-block: 2rem;
+	height: 687px;
 }
 
 .introContent {
-  display: grid;
-  height: 600px;
-  width: inherit;
-  background: url('/src/layout/assets/lake.svg');
-  margin-block-start: 5px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+	display: grid;
+	min-height: 600px;
+	width: inherit;
+	background: url('/src/layout/assets/lake.svg');
+	margin-block-start: 5px;
+	/* border-top-left-radius: 30px;
+  border-top-right-radius: 30px; */
+	border-radius: 30px;
+	align-items: center;
 }
 
 .briefAbout {
-  color: rgba(245, 245, 245, .99);
-  margin-bottom: 5px;
-  font-weight: 600;
+	color: rgba(245, 245, 245, 0.99);
+	margin-bottom: 5px;
+	font-weight: 600;
 }
 
-
 .introSkills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.6rem;
-  place-self: center;
-  margin-inline: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	line-height: 1.6rem;
+	place-self: center;
+	margin-inline: 4rem;
+	font-size: 1;
 }
 
 @media (min-width: 1800px) {
-  .introSkills {
-    margin-inline: 6rem;
-  }
+	.introSkills {
+		margin-inline: 6rem;
+	}
 }
 
-@media (max-width: 440px) {
-  .introSkills {
-    margin-inline: 10px;
-  }
-}
-
-.skillBadge {
-  font-weight: bold;
-  background-color: var(--alternate-color);
-  text-align: center;
-  padding: .6rem;
-  border-radius: 6px;
-  box-shadow: #c0392b 0px 3px, var(--secondary-color) 0px 4px 6px;
-  color: var(--secondary-color);
+@media (min-width: 600px) {
+	.intro {
+		padding-inline: 3rem;
+	}
 }
 
 .cardWrapper {
-  display: block;
-  width: 320px;
-  height: 420px;
-  position: relative;
-  background-color: #f7f7f2;
+	display: block;
+	width: 320px;
+	height: 420px;
+	position: relative;
+	background-color: #f7f7f2;
 }
 
 .latest {
-  display: block;
-  text-rendering: optimizeLegibility;
-  font-weight: 400;
-  padding-block: 1rem;
-  min-height: 500px;
-  background-color: rgb(245, 245, 245);
+	display: block;
+	text-rendering: optimizeLegibility;
+	font-weight: 400;
+	padding-block: 1rem;
+	min-height: 500px;
+	background-color: rgb(245, 245, 245);
 }
 
 .carouselWrapper button {
-  background: none;
-  border: none;
-  color: var(--header-color);
-  font-size: 2rem;
+	background: none;
+	border: none;
+	color: var(--header-color);
+	font-size: 2rem;
 }
 
 .latest > h2 {
-  padding-inline: 64px;
+	padding-inline: 64px;
 }
-
 
 .latest-lg {
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-  column-gap: 1rem
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	row-gap: 1rem;
+	column-gap: 1rem;
 }
 
-
 .carousel {
-  overflow: hidden;
-  position: relative;
+	overflow: hidden;
+	position: relative;
 }
 
 .carouselInner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 }
 
 .carouselItem {
-  display: none;
+	display: none;
 }
 
 .carouselWrapper button:hover {
-  color: var(--secondary-color);
+	color: var(--secondary-color);
 }
 
 .carouselPrev {
-  position: absolute;
-  top: 50%;
-  padding-left: 15px;
-
+	position: absolute;
+	top: 50%;
+	padding-left: 15px;
 }
 
 .carouselNext {
-  position: absolute;
-  top: 50%;
-  left: 85%;
-  padding-right: 25px;
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	padding-right: 25px;
 }
 
 .carousel .cardWrapper {
-  border-radius: 4px;
+	border-radius: 4px;
 }
 
 .projCard {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .projCard {
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
 }
 
 .projCardContent {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .projCardContent > p {
-  text-align: start;
-  overflow-wrap: break-word;
-  margin: 1rem;
+	text-align: start;
+	overflow-wrap: break-word;
+	margin: 1rem;
 }
 
 .projCardContent > h3 {
-  text-align: center;
-  margin: 0;
+	text-align: center;
+	margin: 0;
 }
 
 .certWrapper {
-  max-width: fit-content;
+	max-width: fit-content;
 }
 
 .certified > h2 {
-  padding-inline: 64px;
+	padding-inline: 64px;
 }
 
 .certified-lg {
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-  column-gap: 1rem
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	row-gap: 1rem;
+	column-gap: 1rem;
 }
 
 .contact {
-  background-color: rgb(245, 245, 245);
-  padding-block: 1rem;
-  margin-block: 3rem;
+	background-color: rgb(245, 245, 245);
+	padding-block: 1rem;
+	margin-block: 3rem;
 }
 
 .contactForm {
-  min-width: 295px;
+	min-width: 295px;
 }
 
 .contactForm > h2 {
-  text-align: center;
-  color: var(--dark-font);
-  
+	text-align: center;
+	color: var(--dark-font);
+}
+
+.message {
+	text-align: center;
+	color: rgba(239, 15, 32, 0.8);
 }
 
 .contactForm > p {
-  text-align: center;
-  padding-inline: 1rem;
-  color: var(--light-font);
+	text-align: center;
+	padding-inline: 1rem;
+	color: var(--light-font);
 }
 
 .contactInput {
-  display: flex;
-  padding-block: 1rem;
-  gap: 1rem;
-  justify-content: center;
+	display: flex;
+	padding-block: 1rem;
+	gap: 1rem;
+	justify-content: center;
 }
 
 .contactInput > input {
-  min-width: 295px;
-  background-color: rgb(245, 245, 245);
+	min-width: 295px;
+	background-color: rgb(245, 245, 245);
 }
 
 .contactInput > button {
-  background-color: var(--secondary-color);
-  color: #f7f7f2;
-  border-radius: 4px;
+	background-color: var(--secondary-color);
+	color: #f7f7f2;
+	border-radius: 4px;
 }
 
 .footer {
-  display: flex;
-  flex-flow: column;
-  text-align: center;
-  margin-block: 20px;
-
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	margin-block: 20px;
 }
-
-

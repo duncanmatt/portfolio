@@ -1,25 +1,25 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { Button } from 'antd';
 
 function Contact() {
-  const [text, setText] = useState('');
-  const [btnDisabled, setBtnDisabled] = useState(true);
-  const [message, setMessage] = useState('');
+	const [text, setText] = useState('');
+	const [btnDisabled, setBtnDisabled] = useState(true);
+	const [message, setMessage] = useState('');
 
-  const handleTextChange = (e) => {
-    if (text === '') {
-      setBtnDisabled(true);
-      setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10) {
-      setMessage('Text must be at least 10 characters');
-      setBtnDisabled(true);
-    } else {
-      setMessage(null);
-      setBtnDisabled(false);
-    }
-    
-    setText(e.target.value)
-  }
+	const handleTextChange = (e) => {
+		if (text === '') {
+			setBtnDisabled(true);
+			setMessage(null);
+		} else if (text !== '' && !text.includes('@')) {
+			setMessage('Please enter a valid email address');
+			setBtnDisabled(true);
+		} else {
+			setMessage(null);
+			setBtnDisabled(false);
+		}
+
+		setText(e.target.value);
+	};
 
 	return (
 		<div className='contact'>
@@ -29,14 +29,13 @@ function Contact() {
 				<div className='contactInput'>
 					<input
 						onChange={handleTextChange}
-						type='text'
+						type='email'
 						placeholder='Enter your email'
 						value={text}
 					/>
-          {!btnDisabled && <Button type='submit' >Subscribe</Button> }
-          
+					{!btnDisabled && <Button type='submit'>Subscribe</Button>}
 				</div>
-        {message && <div className="message">{message}</div>}
+				{message && <div className='message'>{message}</div>}
 			</form>
 		</div>
 	);
