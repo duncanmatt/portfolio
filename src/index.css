@@ -48,7 +48,7 @@ header {
 }
 
 @media (max-width: 750px) {
-	.pageHeader > .headerName {
+	.pageHeader > .headerInitials {
 		display: none;
 	}
 }
@@ -56,14 +56,12 @@ header {
 .pageHeader > .right {
 	grid-column: 3;
 	display: inline-flex;
-	justify-content: space-around;
-	padding-inline: 1rem 0;
-	align-self: right;
+	justify-content: right;
+	gap: 3rem;
 }
 
 .intro {
 	display: block;
-	padding-block: 2rem;
 	height: 687px;
 }
 
@@ -71,39 +69,29 @@ header {
 	display: grid;
 	min-height: 600px;
 	width: inherit;
-	background: url('/src/layout/assets/lake.svg');
-	margin-block-start: 5px;
-	/* border-top-left-radius: 30px;
-  border-top-right-radius: 30px; */
-	border-radius: 30px;
+	background-image: url('/src/layout/assets/lake.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
 	align-items: center;
 }
 
 .briefAbout {
 	color: rgba(245, 245, 245, 0.99);
 	margin-bottom: 5px;
-	font-weight: 600;
-}
-
-.introSkills {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	line-height: 1.6rem;
-	place-self: center;
-	margin-inline: 4rem;
-	font-size: 1;
-}
-
-@media (min-width: 1800px) {
-	.introSkills {
-		margin-inline: 6rem;
-	}
+	font-size: 2rem;
+	font-weight: 800;
+	letter-spacing: 0.236rem;
+	padding-inline: 0 3rem;
+	text-align: right;
 }
 
 @media (min-width: 600px) {
 	.intro {
 		padding-inline: 3rem;
+		padding-block: 2rem;
+	}
+	.introContent {
+		border-radius: none;
 	}
 }
 

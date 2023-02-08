@@ -16,18 +16,13 @@ function LatestMobile() {
 		{
 			id: 2,
 			title: "Marcus' Fullstack",
-			desc: 'eCommerce website made with React and Express',
+			desc: 'eCommerce website made with React and Express, newsletter and user information is collected with MongoDB',
 		},
 		{
 			id: 3,
 			title: 'Feedback App',
 			desc: 'React app for leaving reviews that are stored with firebase',
 			pic: `${fbAppPreview}`,
-		},
-		{
-			id: 4,
-			title: 'Fullstack MERN App',
-			desc: 'description',
 		},
 		{
 			id: 5,

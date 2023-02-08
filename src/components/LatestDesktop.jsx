@@ -13,7 +13,7 @@ function LatestDesktop() {
     {
       id: 2,
       title: "Marcus' Fullstack",
-      desc: 'eCommerce website made with React and Express',
+      desc: 'eCommerce website made with React and Express, newsletter and user information is collected with MongoDB',
       pic: ''
     },
     {
@@ -21,11 +21,6 @@ function LatestDesktop() {
       title: 'Feedback App',
       desc: 'React app for leaving reviews that are stored with firebase',
       pic: `${fbAppPreview}`
-    },
-    {
-      id: 4,
-      title: 'MERN Support App',
-      desc: 'MongoDB, Express, React, Node.js',
     },
     {
       id: 5,
