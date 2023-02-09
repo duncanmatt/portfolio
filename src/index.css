@@ -1,10 +1,8 @@
 :root {
 	--primary-color: #000;
 	--secondary-color: #252e11;
-	--alternate-color: rgba(209, 115, 52, 0.99);
 	--header-color: rgba(35, 46, 17, 0.3);
-	--dark-font: rgba(51, 51, 51 99%);
-	--light-font: rgb(153, 153, 153);
+	--font-color: rgba(51, 51, 51 99%);
 }
 
 * {
@@ -19,45 +17,95 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 1.4;
+	line-height: 1.15;
+	color: var(--font-color);
 }
 
 header {
 	display: block;
-	height: 100px;
+	height: 60px;
 	background-color: var(--header-color);
-}
-
-.pageHeader {
-	padding-inline: 3rem;
-	display: grid;
-	grid-template-rows: 100px;
-	grid-template-columns: 1fr min-content 1fr;
-	align-items: center;
+	line-height: 1.15;
 	color: #252e11;
 }
 
-.pageHeader > .headerName {
-	font-family: 'Fascinate', cursive;
+a {
+	text-decoration: none;
+	color: #252e11;
+}
+
+li {
+	text-decoration: none;
+}
+
+.mobileHeader {
+	height: inherit;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+.desktopHeader {
+	display: grid;
+	grid-template-columns: 1fr min-content 1fr;
+	grid-template-rows: 60px;
+	align-items: center;
+	font-size: 1rem;
+}
+
+.mobileHeaderName {
+	padding-inline: 1rem 0;
 	font-size: 2rem;
+	font-family: 'Fascinate', cursive;
 }
 
-.pageHeader > .mid {
-	grid-column: 2;
-	justify-items: center;
+.desktopHeaderName {
+	padding-inline: 3rem 0;
+	font-family: 'Fascinate', cursive;
 }
 
-@media (max-width: 750px) {
-	.pageHeader > .headerInitials {
-		display: none;
-	}
+.headerInitials {
+	place-self: center;
 }
 
-.pageHeader > .right {
-	grid-column: 3;
+.right {
 	display: inline-flex;
-	justify-content: right;
-	gap: 3rem;
+	justify-content: space-evenly;
+	padding-inline: 0 3rem;
+	/* flex-basis: 100%; */
+	font-size: 1.25rem;
+}
+
+.menuWrapper {
+	background-color: rgb(245, 245, 245);
+	position: sticky;
+}
+
+.menuUpperContent {
+	background-color: var(--header-color);
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: row;
+	padding-inline: 1rem;
+	font-size: 1.2em;
+}
+
+.menuLowerContent {
+	background-color: rgb(245, 245, 245);
+	padding-inline: 3rem;
+}
+
+.menuLink {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
 }
 
 .intro {
@@ -83,16 +131,6 @@ header {
 	letter-spacing: 0.236rem;
 	padding-inline: 0 3rem;
 	text-align: right;
-}
-
-@media (min-width: 600px) {
-	.intro {
-		padding-inline: 3rem;
-		padding-block: 2rem;
-	}
-	.introContent {
-		border-radius: none;
-	}
 }
 
 .cardWrapper {
@@ -235,7 +273,6 @@ header {
 .contactForm > p {
 	text-align: center;
 	padding-inline: 1rem;
-	color: var(--light-font);
 }
 
 .contactInput {
@@ -261,4 +298,20 @@ header {
 	flex-flow: column;
 	text-align: center;
 	margin-block: 20px;
+}
+
+@media (min-width: 600px) {
+	.intro {
+		padding-inline: 3rem;
+		padding-block: 2rem;
+	}
+	.introContent {
+		border-radius: none;
+	}
+}
+
+@media (min-width: 1000px) {
+	.desktopHeader {
+		font-size: 1.4rem;
+	}
 }

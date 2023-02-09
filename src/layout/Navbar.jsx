@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import { default as Initials } from './assets/initials.svg';
 import {
@@ -11,70 +11,48 @@ import {
 	RightOutlined,
 } from '@ant-design/icons';
 
-// TODO: max-width: 600px make links accessable through burger menu and remove border radius from intro pic
-
-function MobileHeader() {
+function MobileHeader({ links }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const showMenu = () => setMenuOpen(!menuOpen);
 
-	const links = [
-		{
-			id: 0,
-			title: 'Linkedin',
-			url: '',
-		},
-		{
-			id: 1,
-			title: 'GitHub',
-			url: 'https://github.com/duncanmatt',
-		},
-		{
-			id: 2,
-			title: 'Reddit',
-			url: '',
-		},
-	];
-
 	return (
-		<div className='mobileHeader'>
+		<>
 			{menuOpen ? (
-				<div className='menu-content'>
-					<div className='menu-upper-wrapper'>
-						<strong style={{ alignSelf: 'flex-start' }}>Black Sheep</strong>
-
-						<CloseOutlined
-							style={{ alignSelf: 'flex-end' }}
-							onClick={showMenu}
-						/>
+				<div className='menuWrapper'>
+					<div className='menuUpperContent'>
+						<CloseOutlined onClick={showMenu} />
 					</div>
-					<hr />
-					<div className='menu-lower-wrapper'>
-						<ul className='menu-links'>
+					<div className='menuLowerContent'>
+						<span className='menuLinks'>
 							{links.map(link => (
-								<a href={link.url}>
-									<li
-										key={link.id}
-										className='menu-link'
-										onClick={showMenu}>
-										{link.title}
-										<RightOutlined style={{ alignSelf: 'flex-end' }} />
-									</li>
+								<a
+									key={link.id}
+									href={link.url}
+									className='menuLink'
+									onClick={showMenu}>
+									<div>
+										{link.icon} {link.title}
+									</div>
+									<RightOutlined style={{ alignSelf: 'flex-end' }} />
 								</a>
 							))}
-						</ul>
+						</span>
 					</div>
 				</div>
 			) : (
-				<div className='headerClosed'>
+				<div className='mobileHeader'>
 					<h1 className='mobileHeaderName'>Matt Duncan</h1>
-					<MenuOutlined onClick={showMenu} />
+					<MenuOutlined
+						onClick={showMenu}
+						style={{ paddingInline: '0 1rem', fontSize: '1.2em' }}
+					/>
 				</div>
 			)}
-		</div>
+		</>
 	);
 }
 
-function DesktopHeader() {
+function DesktopHeader({ links }) {
 	return (
 		<div className='desktopHeader'>
 			<h1 className='desktopHeaderName'>Matt Duncan</h1>
@@ -84,32 +62,49 @@ function DesktopHeader() {
 				className='headerInitials'
 			/>
 			<span className='right'>
-				<LinkedinOutlined
-					style={{
-						fontSize: '1.6rem',
-					}}
-				/>
-				<GithubOutlined
-					style={{
-						fontSize: '1.6rem',
-					}}
-				/>
-				<RedditOutlined
-					style={{
-						fontSize: '1.6rem',
-					}}
-				/>
+				{links.map(link => (
+					<a
+						key={link.id}
+						href={link.url}
+						className='header-link'>
+						{link.icon}
+					</a>
+				))}
 			</span>
 		</div>
 	);
 }
 
 function Navbar() {
+	const links = [
+		{
+			id: 0,
+			title: 'Linkedin',
+			url: 'https://www.linkedin.com/in/matthew-duncan-bb8757209',
+			icon: <LinkedinOutlined />,
+		},
+		{
+			id: 1,
+			title: 'GitHub',
+			url: 'https://github.com/duncanmatt',
+			icon: <GithubOutlined />,
+		},
+		{
+			id: 2,
+			title: 'Reddit',
+			url: 'https://www.reddit.com/user/marriedtomdn',
+			icon: <RedditOutlined />,
+		},
+	];
 	const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
 	return (
-		<header className='pageHeader'>
-			{isMobile ? <MobileHeader /> : <DesktopHeader />}
+		<header>
+			{isMobile ? (
+				<MobileHeader links={links} />
+			) : (
+				<DesktopHeader links={links} />
+			)}
 		</header>
 	);
 }
