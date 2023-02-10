@@ -3,6 +3,7 @@ import Carousel from './shared/Carousel';
 import bswPreview from '../layout/assets/bswPreview.png';
 import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
 import fbAppPreview from '../layout/assets/fbAppPreview.png';
+import hmPreview from '../layout/assets/hmPreview.png';
 
 function LatestMobile() {
 
@@ -26,9 +27,10 @@ function LatestMobile() {
 			pic: `${fbAppPreview}`,
 		},
 		{
-			id: 5,
+			id: 4,
 			title: "House Marketplace",
 			desc: 'React app for posting or viewing real estate listings that are stored with firebase',
+			pic: `${hmPreview}`,
 		},
 	];
 

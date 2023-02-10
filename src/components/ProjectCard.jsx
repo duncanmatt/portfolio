@@ -13,6 +13,7 @@ function ProjectCard({ project: { id, title, desc, pic, url } }) {
 				<img
 					src={pic}
 					alt={title}
+					style={{maxHeight: '300px', maxWidth: '300px'}}
 				/>
 			}
 			style={{

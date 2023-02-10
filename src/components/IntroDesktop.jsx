@@ -2,7 +2,7 @@
 
 function IntroDesktop() {
 	const title = `
-    Hello! I'm Matt Duncan, a self-taught React developer from northern Virginia.
+    Hello! I'm Matt Duncan, self-taught React developer from northern Virginia.
   `;
 
 	return (
