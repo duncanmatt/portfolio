@@ -7,7 +7,7 @@ function Latest() {
 
   
   
-  const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 680px)' });
 
 
   return <div className="latest">

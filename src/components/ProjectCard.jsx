@@ -1,33 +1,33 @@
 import PropTypes from 'prop-types';
 import { Card } from 'antd';
-import DSAPic from '../layout/assets/dsa.jpg';
 
-function ProjectCard({ project: { id, title, desc, pic } }) {
+
+const { Meta } = Card;
+
+function ProjectCard({ project: { id, title, desc, pic, url } }) {
 	return (
 		<Card
 			key={id}
 			hoverable
-      cover={<img
-        className='projCardPic'
-        src={pic}
-        alt='pic'
-      />}
+			cover={
+				<img
+					src={pic}
+					alt={title}
+				/>
+			}
 			style={{
-				width: 320,
-				height: 420,
+				width: 300,
+				height: 450,
 				backgroundColor: '#fff',
+				
 			}}>
-			<div className='projCardContent'>
-				<h3 className='projectCardTitle'>{title}</h3>
-				<p className='projectCardDesc'>{desc}</p>
-			</div>
+			<Meta
+				title={title}
+				description={desc}
+			/>
 		</Card>
 	);
 }
-
-ProjectCard.defaultProps = {
-	pic: `${DSAPic}`,
-};
 
 ProjectCard.propTypes = {
 	project: PropTypes.object.isRequired,

@@ -1,6 +1,6 @@
-import Badge from './shared/Badge';
 
-function SkillsDesktop() {
+
+function IntroDesktop() {
 	const title = `
     Hello! I'm Matt Duncan, a self-taught React developer from northern Virginia.
   `;
@@ -27,4 +27,4 @@ function SkillsDesktop() {
 	);
 }
 
-export default SkillsDesktop;
+export default IntroDesktop;

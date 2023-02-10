@@ -82,12 +82,11 @@ h1 {
 }
 
 .menuWrapper {
-	background-color: rgb(245, 245, 245);
+	/* background-color: rgb(245, 245, 245); */
 	position: sticky;
 }
 
 .menuUpperContent {
-	background-color: var(--header-color);
 	height: 60px;
 	display: flex;
 	align-items: center;
@@ -98,24 +97,33 @@ h1 {
 }
 
 .menuLowerContent {
-	background-color: rgb(245, 245, 245);
-	padding-inline: 3rem;
+	padding-inline: 3rem 1rem;
+	margin-inline-end: 2rem;
+	background-color: #fff;
 }
 
 .menuLink {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+	font-weight: 600;
+	font-size: 1.25rem;
+	letter-spacing: 0.1rem;
+	padding-block: 1rem;
+}
+
+.menuLink:not(:last-of-type) {
+	border-bottom: 1px solid rgb(217, 217, 217);
 }
 
 .intro {
 	display: block;
-	height: 687px;
+	height: 600px;
 }
 
 .introContent {
 	display: grid;
-	min-height: 600px;
+	height: 600px;
 	width: inherit;
 	background-image: url('/src/layout/assets/lake.svg');
 	background-repeat: no-repeat;
@@ -131,6 +139,7 @@ h1 {
 	letter-spacing: 0.236rem;
 	padding-inline: 0 3rem;
 	text-align: right;
+	line-height: 1.4;
 }
 
 .cardWrapper {
@@ -145,42 +154,47 @@ h1 {
 	display: block;
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
-	padding-block: 1rem;
+	padding-block: 1rem 3rem;
 	min-height: 500px;
-	background-color: rgb(245, 245, 245);
+	background-color: #f2f3f4;
+	margin-block: 3rem;
 }
 
 .carouselWrapper button {
 	background: none;
 	border: none;
-	color: var(--header-color);
+	color: var(--font-color);
 	font-size: 2rem;
 }
 
 .latest > h2 {
-	padding-inline: 64px;
+	padding-inline: 3rem 0;
+	padding-block: 0.5rem 1rem;
+	letter-spacing: 0.1rem;
 }
 
 .latest-lg {
+	padding-block: 1rem;
 	margin: 5px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	row-gap: 1rem;
-	column-gap: 1rem;
+	row-gap: 3rem;
+	column-gap: 2rem;
 }
 
 .carousel {
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
-}
-
-.carouselInner {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
-	width: 100%;
+	justify-content: space-evenly;
+	flex-basis: 100%;
+	min-width: 320px;
+}
+
+.carouselInner {
 }
 
 .carouselItem {
@@ -189,19 +203,6 @@ h1 {
 
 .carouselWrapper button:hover {
 	color: var(--secondary-color);
-}
-
-.carouselPrev {
-	position: absolute;
-	top: 50%;
-	padding-left: 15px;
-}
-
-.carouselNext {
-	position: absolute;
-	top: 50%;
-	left: 85%;
-	padding-right: 25px;
 }
 
 .carousel .cardWrapper {
@@ -300,13 +301,13 @@ h1 {
 	margin-block: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.intro {
 		padding-inline: 3rem;
 		padding-block: 2rem;
 	}
 	.introContent {
-		border-radius: none;
+		border-radius: 3%;
 	}
 }
 

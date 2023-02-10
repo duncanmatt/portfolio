@@ -18,6 +18,11 @@ function Carousel({ items }) {
 
 	return (
 		<div className='carousel'>
+			<button
+				className='carouselPrev'
+				onClick={prevItem}>
+				<LeftOutlined />
+			</button>
 			<div className='carouselInner'>
 				{items.map(item => (
 					<div
@@ -25,7 +30,7 @@ function Carousel({ items }) {
 						className={
 							item.id !== activeItem ? 'carouselItem' : 'carouselItemActive'
 						}>
-						{items.length === 5 ? (
+						{items.length === 4 ? (
 							<ProjectCard project={item} />
 						) : (
 							<CertCard cert={item} />
@@ -33,11 +38,6 @@ function Carousel({ items }) {
 					</div>
 				))}
 			</div>
-			<button
-				className='carouselPrev'
-				onClick={prevItem}>
-				<LeftOutlined />
-			</button>
 			<button
 				className='carouselNext'
 				onClick={nextItem}>

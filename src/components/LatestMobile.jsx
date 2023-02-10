@@ -1,6 +1,6 @@
 
 import Carousel from './shared/Carousel';
-
+import bswPreview from '../layout/assets/bswPreview.png';
 import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
 import fbAppPreview from '../layout/assets/fbAppPreview.png';
 
@@ -17,6 +17,7 @@ function LatestMobile() {
 			id: 2,
 			title: "Marcus' Fullstack",
 			desc: 'eCommerce website made with React and Express, newsletter and user information is collected with MongoDB',
+			pic: `${bswPreview}`
 		},
 		{
 			id: 3,
