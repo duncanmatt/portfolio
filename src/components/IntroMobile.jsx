@@ -1,25 +1,17 @@
 import React from 'react';
 
-function SkillsMobile() {
+function IntroMoboile() {
 	const title = `
     Hello! I'm Matt Duncan, a self-taught React developer from northern Virginia.
   `;
 
 	return (
-		<main
+		<div
 			className='introContent'
-			style={{
-			
-			}}>
-			<p
-				className='briefAbout'
-				>
-				{title}
-			</p>
-				
-		
-		</main>
+			style={{}}>
+			<p className='briefAbout'>{title}</p>
+		</div>
 	);
 }
 
-export default SkillsMobile;
+export default IntroMoboile;
