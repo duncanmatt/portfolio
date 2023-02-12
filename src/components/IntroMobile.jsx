@@ -6,9 +6,7 @@ function IntroMoboile() {
   `;
 
 	return (
-		<div
-			className='introContent'
-			style={{}}>
+		<div className='introContent'>
 			<p className='briefAbout'>{title}</p>
 		</div>
 	);

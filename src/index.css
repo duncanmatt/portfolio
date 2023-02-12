@@ -52,7 +52,7 @@ h1 {
 
 h2 {
 	padding-inline: 2rem 0;
-	padding-block: 0.5rem 1.5rem;
+	padding-block: 0.5rem 1rem;
 	letter-spacing: 0.1rem;
 }
 
@@ -71,7 +71,6 @@ h2 {
 }
 
 .desktopHeaderName {
-	padding-inline: 2rem 0;
 	font-family: 'Fascinate', cursive;
 }
 
@@ -140,12 +139,11 @@ h2 {
 .briefAbout {
 	color: rgba(245, 245, 245, 0.99);
 	margin-bottom: 5px;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 800;
 	letter-spacing: 0.236rem;
-	padding-inline: 0 3rem;
-	text-align: right;
 	line-height: 1.4;
+	text-align: center;
 }
 
 .cardWrapper {
@@ -272,11 +270,22 @@ h2 {
 	h2 {
 		padding-inline: 1rem;
 	}
+	.briefAbout {
+		padding-inline: 1.6rem;
+	}
 }
 
 @media (min-width: 800px) {
+	h2 {
+		padding-inline: 1rem;
+		font-size: 1.45rem;
+	}
+	.desktopHeader {
+		padding-inline: 1rem 0;
+		font-size: 1.4rem;
+	}
 	.intro {
-		padding-inline: 3rem;
+		padding-inline: 1rem;
 		padding-block: 2rem;
 	}
 	.introContent {
@@ -286,6 +295,19 @@ h2 {
 
 @media (min-width: 1000px) {
 	.desktopHeader {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
+		padding-inline: 3rem 0;
+	}
+	h2 {
+		padding-inline: 3rem;
+	}
+	.intro {
+		padding-inline: 3rem;
+	}
+	.briefAbout {
+		padding-inline: 6rem;
+	}
+	.introContent {
+		margin-inline: 3rem;
 	}
 }

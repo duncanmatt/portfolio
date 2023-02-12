@@ -1,5 +1,3 @@
-
-
 function IntroDesktop() {
 	const title = `
     Hello! I'm Matt Duncan, self-taught React developer from northern Virginia.
@@ -12,17 +10,7 @@ function IntroDesktop() {
 				gridTemplateColumns: 'repeat(1, 1fr)',
 				textAlign: 'center',
 			}}>
-			<h2
-				className='briefAbout'
-				style={{
-					fontSize: '3rem',
-					marginInlineStart: '2rem',
-					marginBlockStart: '2rem',
-				}}>
-				{title}
-			</h2>
-		
-		
+			<p className='briefAbout'>{title}</p>
 		</div>
 	);
 }
