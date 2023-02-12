@@ -40,7 +40,7 @@ function LatestDesktop() {
 		<>
 			<div className='latest-lg'>
 				<h2>Latest</h2>
-				<div className='certifications'>
+				<div className='latestCards'>
 					{items.map(item => (
 						<ProjectCard
 							key={item.id}
