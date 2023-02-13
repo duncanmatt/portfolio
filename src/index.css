@@ -176,7 +176,7 @@ h2 {
 	margin: 5px;
 	display: grid;
 	grid-template-rows: min-content 1fr;
-	/* padding-block: 1rem; */
+	padding-block: 1rem;
 }
 
 .latestCards {
@@ -184,7 +184,9 @@ h2 {
 	justify-content: space-evenly;
 	flex-flow: row wrap;
 	padding-inline: 3rem;
-	gap: 1rem;
+	padding-block: 1.75rem 1rem;
+	column-gap: 1rem;
+	row-gap: 2rem;
 }
 
 .carouselLarge {
@@ -284,10 +286,10 @@ h2 {
 }
 
 @media (min-width: 800px) {
-	h2 {
+	/* h2 {
 		padding-inline: 1rem;
 		font-size: 1.45rem;
-	}
+	} */
 	.desktopHeader {
 		padding-inline: 1rem 0;
 		font-size: 1.4rem;
