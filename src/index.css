@@ -66,7 +66,7 @@ h2 {
 
 .mobileHeaderName {
 	padding-inline: 1rem 0;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-family: 'Fascinate', cursive;
 }
 
@@ -138,7 +138,7 @@ h2 {
 }
 
 .briefAbout {
-	color: rgba(245, 245, 245, 0.99);
+	color: rgb(245, 245, 245);
 	margin-bottom: 5px;
 	font-size: 3rem;
 	font-weight: 800;
