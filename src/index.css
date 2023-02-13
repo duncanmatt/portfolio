@@ -53,7 +53,7 @@ h1 {
 h2 {
 	padding-inline: 1rem;
 	padding-block: 0.5rem 1rem;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.21rem;
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -158,7 +158,7 @@ h2 {
 .latest {
 	display: block;
 	text-rendering: optimizeLegibility;
-	margin-block-start: 3rem;
+	/* margin-block-start: 3rem; */
 	padding-block: 0 3rem;
 	min-height: 500px;
 }
@@ -198,6 +198,7 @@ h2 {
 	justify-content: space-evenly;
 	flex-basis: 100%;
 	min-width: 320px;
+	padding-block: 1rem;
 }
 
 .carouselItem {
