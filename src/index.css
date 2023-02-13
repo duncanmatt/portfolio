@@ -245,7 +245,7 @@ h2 {
 
 .certified {
 	background-color: #f2f3f4;
-	padding-block: 1rem;
+	padding-block: 2rem;
 }
 
 .certifications {
@@ -254,7 +254,7 @@ h2 {
 	flex-flow: row wrap;
 	justify-content: center;
 	gap: 3rem;
-	padding-block: 1rem;
+	padding-block: 2rem;
 }
 
 .upper {
