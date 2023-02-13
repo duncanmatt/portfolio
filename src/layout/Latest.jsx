@@ -3,7 +3,7 @@ import LatestDesktop from '../components/LatestDesktop';
 import { useMediaQuery } from 'react-responsive';
 
 function Latest() {
-	const isMobile = useMediaQuery({ query: '(max-width: 680px)' });
+	const isMobile = useMediaQuery({ query: '(max-width: 725px)' });
 
 	return (
 		<div className='latest'>
