@@ -139,6 +139,7 @@ h2 {
 	background-image: url('/src/layout/assets/lake.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	align-items: center;
 }
 
@@ -148,7 +149,7 @@ h2 {
 	font-size: 3.3rem;
 	font-weight: 500;
 	letter-spacing: 0.136rem;
-	line-height: 1.2;
+	line-height: 1.6;
 	text-align: center;
 	-webkit-text-stroke: 1px var(--secondary-color);
 }
