@@ -143,13 +143,14 @@ h2 {
 }
 
 .briefAbout {
-	color: rgb(245, 245, 245);
+	color: var(--primary-color);
 	margin-bottom: 5px;
-	font-size: 3rem;
-	font-weight: 800;
-	letter-spacing: 0.236rem;
-	line-height: 1.4;
+	font-size: 3.3rem;
+	font-weight: 500;
+	letter-spacing: 0.136rem;
+	line-height: 1.2;
 	text-align: center;
+	-webkit-text-stroke: 1px var(--secondary-color);
 }
 
 .cardWrapper {
@@ -167,20 +168,10 @@ h2 {
 }
 
 .latest .ant-card-cover {
-	/* border-top: 1px solid rgb(217, 217, 217);
-	border-right: 1px solid rgb(217, 217, 217);
-	border-left: 1px solid rgb(217, 217, 217);
-	border-top-right-radius: 8px;
-	border-top-left-radius: 8px; */
 	height: 300px;
 }
 
 .latest .ant-card-body {
-	/* border-bottom: 1px solid rgb(217, 217, 217);
-	border-right: 1px solid rgb(217, 217, 217);
-	border-left: 1px solid rgb(217, 217, 217);
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px; */
 	height: 150px;
 }
 
@@ -204,7 +195,7 @@ h2 {
 
 .latestCards {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-flow: row wrap;
 	padding-inline: 3rem;
 	padding-block: 1.75rem 1rem;
