@@ -2,7 +2,7 @@
 	--primary-color: #f7f7f2;
 	--secondary-color: #252e11;
 	--header-color: rgba(35, 46, 17, 0.3);
-	--font-color: rgba(51, 51, 51 99%);
+	--font-color: rgb(68, 68, 68);
 }
 
 * {
@@ -11,7 +11,8 @@
 
 body {
 	margin: 0;
-	background-color: hsl(79, 46%, 99%);
+	/* background-color: hsl(79, 46%, 99%); */
+	background-color: #f7f7f2;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -19,6 +20,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1.15;
 	color: var(--font-color);
+	text-rendering: optimizeLegibility;
 }
 
 header {
@@ -31,7 +33,7 @@ header {
 
 a {
 	text-decoration: none;
-	color: #252e11;
+	color: var(--font-color);
 }
 
 li {
@@ -57,6 +59,7 @@ h2 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2rem;
 	margin: 0;
+	color: #252e11;
 }
 
 .desktopHeader {
@@ -159,10 +162,30 @@ h2 {
 
 .latest {
 	display: block;
-	text-rendering: optimizeLegibility;
-	/* margin-block-start: 3rem; */
 	padding-block: 1rem 3rem;
 	min-height: 500px;
+}
+
+.latest .ant-card-cover {
+	border-top: 1px solid rgb(217, 217, 217);
+	border-right: 1px solid rgb(217, 217, 217);
+	border-left: 1px solid rgb(217, 217, 217);
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	height: 300px;
+}
+
+.latest .ant-card-body {
+	border-bottom: 1px solid rgb(217, 217, 217);
+	border-right: 1px solid rgb(217, 217, 217);
+	border-left: 1px solid rgb(217, 217, 217);
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	height: 150px;
+}
+
+.latest .ant-card-body:hover {
+	border: none;
 }
 
 .carouselWrapper button {
@@ -210,12 +233,9 @@ h2 {
 	display: none;
 }
 
-.carouselWrapper button:hover {
-	color: var(--secondary-color);
-}
-
 .carousel .cardWrapper {
 	border-radius: 4px;
+	border: 1px solid rgb(217, 217, 217);
 }
 
 .projCard {
@@ -275,7 +295,7 @@ h2 {
 	display: flex;
 	flex-flow: column;
 	text-align: center;
-	margin-block: 20px;
+	font-weight: 300;
 }
 
 @media (max-width: 600px) {
@@ -286,10 +306,6 @@ h2 {
 }
 
 @media (min-width: 800px) {
-	/* h2 {
-		padding-inline: 1rem;
-		font-size: 1.45rem;
-	} */
 	.desktopHeader {
 		padding-inline: 1rem 0;
 		font-size: 1.4rem;
@@ -299,7 +315,7 @@ h2 {
 		padding-block-start: 2rem;
 	}
 	.introContent {
-		border-radius: 3%;
+		border-radius: 20px;
 	}
 }
 
@@ -312,12 +328,13 @@ h2 {
 		padding-inline: 3rem;
 	}
 	.intro {
-		padding-inline: 3rem;
+		display: flex;
+		justify-content: center;
 	}
 	.briefAbout {
 		padding-inline: 6rem;
 	}
 	.introContent {
-		margin-inline: 4rem;
+		max-width: 1192px;
 	}
 }

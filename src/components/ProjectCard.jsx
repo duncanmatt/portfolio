@@ -9,7 +9,6 @@ function ProjectCard({ project: { id, title, desc, pic, url } }) {
 			<Card
 				key={id}
 				hoverable
-				bordered='true'
 				cover={
 					<img
 						src={pic}
