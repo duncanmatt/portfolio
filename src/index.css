@@ -147,11 +147,11 @@ h2 {
 	color: var(--primary-color);
 	margin-bottom: 5px;
 	font-size: 3.3rem;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.136rem;
 	line-height: 1.6;
 	text-align: center;
-	-webkit-text-stroke: 1px var(--secondary-color);
+	/* -webkit-text-stroke: 1px var(--secondary-color); */
 }
 
 .cardWrapper {
