@@ -48,7 +48,7 @@ li {
 	align-items: center;
 	/* letter-spacing: 0.111rem; */
 	background-color: #212529;
-	padding-block: 2px;
+	padding-block: 2px 4px;
 }
 
 h1 {
