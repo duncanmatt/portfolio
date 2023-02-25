@@ -1,4 +1,3 @@
-import { Divider } from 'antd';
 import DSAPic from '../layout/assets/dsa.jpg';
 import ReactPic from '../layout/assets/reactCert.jpg';
 import BeginnerJSPic from '../layout/assets/beginner-js-cert.png';
