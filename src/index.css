@@ -1,6 +1,6 @@
 :root {
 	--primary-color: #f7f7f2;
-	--secondary-color: #252e11;
+	--hover-color: #252e11;
 	--header-color: rgba(35, 46, 17, 0.3);
 	--font-color: rgb(68, 68, 68);
 	--bg-color: rgba(245, 245, 245, 0.1);
@@ -47,6 +47,8 @@ li {
 	justify-content: space-between;
 	align-items: center;
 	/* letter-spacing: 0.111rem; */
+	background-color: #212529;
+	padding-block: 2px;
 }
 
 h1 {
@@ -78,6 +80,7 @@ h2 {
 
 .desktopHeaderName {
 	font-family: 'Fascinate', serif;
+	padding-inline-start: 1rem;
 	display: flex;
 	align-items: center;
 }
@@ -86,12 +89,17 @@ h2 {
 	display: flex;
 	flex-basis: 100%;
 	justify-content: space-evenly;
-	/* font-size: calc(15px + 0.390625vw); */
 }
 
 .right > a {
 	display: flex;
 	align-items: center;
+	color: #f7f7f2;
+	font-size: 2rem;
+}
+
+.right > a:hover {
+	color: var(--hover-color);
 }
 
 .menuWrapper {
@@ -178,10 +186,6 @@ h2 {
 	height: 150px;
 }
 
-.latest .ant-card-body:hover {
-	border: none;
-}
-
 .carouselWrapper button {
 	background: none;
 	border: none;
@@ -206,6 +210,10 @@ h2 {
 	row-gap: 2rem;
 }
 
+.latestCards > a:hover {
+	filter: drop-shadow(0px 2px 4px var(--primary-color));
+}
+
 .carouselLarge {
 	display: flex;
 	flex-direction: column;
@@ -220,7 +228,7 @@ h2 {
 	justify-content: space-evenly;
 	flex-basis: 100%;
 	min-width: 320px;
-	padding-block: 1rem;
+	padding-block: 2rem 0.5rem;
 }
 
 .carouselItem {
@@ -232,33 +240,7 @@ h2 {
 	border: 1px solid rgb(217, 217, 217);
 }
 
-.projCard {
-	cursor: pointer;
-}
-
-.projCard {
-	display: flex;
-	flex-direction: column;
-	border-radius: 4px;
-}
-
-.projCardContent {
-	font-weight: 500;
-}
-
-.projCardContent > p {
-	text-align: start;
-	overflow-wrap: break-word;
-	margin: 1rem;
-}
-
-.projCardContent > h3 {
-	text-align: center;
-	margin: 0;
-}
-
 .certified {
-	background-color: #f2f3f4;
 	padding-block: 2rem;
 }
 
