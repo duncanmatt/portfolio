@@ -18,7 +18,10 @@ function MobileHeader({ links }) {
 			{menuOpen ? (
 				<div className='menuWrapper'>
 					<div className='menuUpperContent'>
-						<CloseOutlined onClick={showMenu} />
+						<h1 className='mobileHeaderName'>Matt Duncan</h1>
+						<CloseOutlined onClick={showMenu} style={{
+							fontSize: '1.2rem'
+						}} />
 					</div>
 					<div className='menuLowerContent'>
 						<span className='menuLinks'>

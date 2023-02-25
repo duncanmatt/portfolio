@@ -26,7 +26,7 @@ body {
 
 header {
 	display: block;
-	height: inherit;
+	height: 60px;
 	line-height: 1.15;
 	color: #f7f7f2;
 }
@@ -41,8 +41,8 @@ li {
 }
 
 .mobileHeader {
-	position: sticky;
-	height: inherit;
+	/* position: sticky; */
+	height: 60px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
@@ -105,22 +105,23 @@ h2 {
 
 .menuWrapper {
 	position: sticky;
+	z-index: 1000;
 }
 
 .menuUpperContent {
 	height: 60px;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
 	flex-direction: row;
-	padding-inline: 1rem;
+	padding-inline: 0 1rem;
 	font-size: 1.2em;
 }
 
 .menuLowerContent {
 	padding-inline: 3rem 1rem;
-	margin-inline-end: 2rem;
-	background-color: #fff;
+	/* margin-inline-end: 2rem; */
+	background-color: #f9f9f9;
 }
 
 .menuLink {
@@ -288,6 +289,9 @@ h2 {
 		text-align: center;
 		padding-inline: 1rem;
 	}
+	/* header {
+		position: s
+	} */
 }
 
 @media (min-width: 800px) {
