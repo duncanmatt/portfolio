@@ -3,6 +3,7 @@
 	--secondary-color: #252e11;
 	--header-color: rgba(35, 46, 17, 0.3);
 	--font-color: rgb(68, 68, 68);
+	--bg-color: rgba(245, 245, 245, 0.1);
 }
 
 * {
@@ -11,13 +12,13 @@
 
 body {
 	margin: 0;
-	/* background-color: hsl(79, 46%, 99%); */
-	background-color: #f7f7f2;
+	background-color: #212529;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: calc(15px + 0.390625vw);
 	line-height: 1.15;
 	color: var(--font-color);
 	text-rendering: optimizeLegibility;
@@ -25,10 +26,9 @@ body {
 
 header {
 	display: block;
-	height: 60px;
-	background-color: var(--header-color);
+	height: inherit;
 	line-height: 1.15;
-	color: #252e11;
+	color: #f7f7f2;
 }
 
 a {
@@ -46,6 +46,7 @@ li {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
+	/* letter-spacing: 0.111rem; */
 }
 
 h1 {
@@ -59,14 +60,14 @@ h2 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 2rem;
 	margin: 0;
-	color: #252e11;
+	color: #f7f7f2;
 }
 
 .desktopHeader {
 	display: grid;
-	grid-template-columns: 1fr min-content 1fr;
+	grid-template-columns: 1fr minmax(200px, 40vw);
 	grid-template-rows: 60px;
-	align-items: center;
+	background-color: var(--bg-color);
 }
 
 .mobileHeaderName {
@@ -77,19 +78,20 @@ h2 {
 
 .desktopHeaderName {
 	font-family: 'Fascinate', serif;
-	text-align: center;
-	margin-left: -3rem;
-}
-
-.headerInitials {
-	place-self: center;
+	display: flex;
+	align-items: center;
 }
 
 .right {
-	display: inline-flex;
+	display: flex;
+	flex-basis: 100%;
 	justify-content: space-evenly;
-	/* padding-inline: 0 2rem; */
-	font-size: 1.25rem;
+	/* font-size: calc(15px + 0.390625vw); */
+}
+
+.right > a {
+	display: flex;
+	align-items: center;
 }
 
 .menuWrapper {
@@ -288,6 +290,7 @@ h2 {
 	flex-flow: column;
 	text-align: center;
 	font-weight: 300;
+	color: #f7f7f2;
 }
 
 @media (max-width: 600px) {
@@ -300,7 +303,6 @@ h2 {
 @media (min-width: 800px) {
 	.desktopHeader {
 		padding-inline: 1rem 0;
-		font-size: 1.4rem;
 	}
 	.intro {
 		padding-inline: 1rem;
@@ -313,8 +315,7 @@ h2 {
 
 @media (min-width: 1000px) {
 	.desktopHeader {
-		font-size: 1.6rem;
-		padding-inline: 3rem 0;
+		padding-inline: 3rem;
 	}
 	h2 {
 		padding-inline: 3rem;

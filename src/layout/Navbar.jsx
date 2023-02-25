@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { default as Initials } from './assets/initials.svg';
 import {
 	RedditOutlined,
 	LinkedinOutlined,
@@ -55,11 +54,6 @@ function DesktopHeader({ links }) {
 	return (
 		<div className='desktopHeader'>
 			<h1 className='desktopHeaderName'>Matt Duncan</h1>
-			<img
-				src={Initials}
-				alt='initials'
-				className='headerInitials'
-			/>
 			<span className='right'>
 				{links.map(link => (
 					<a

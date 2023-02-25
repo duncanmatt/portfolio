@@ -4,14 +4,16 @@ function IntroDesktop() {
   `;
 
 	return (
-		<div
-			className='introContent'
-			style={{
-				gridTemplateColumns: 'repeat(1, 1fr)',
-				textAlign: 'center',
-			}}>
-			<p className='briefAbout'>{title}</p>
-		</div>
+		<>
+			<div
+				className='introContent'
+				style={{
+					gridTemplateColumns: 'repeat(1, 1fr)',
+					textAlign: 'center',
+				}}>
+				<p className='briefAbout'>{title}</p>
+			</div>
+		</>
 	);
 }
 
