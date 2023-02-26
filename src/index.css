@@ -54,6 +54,7 @@ li {
 
 h1 {
 	margin: 0;
+	font-weight: 400;
 }
 
 h2 {
@@ -76,7 +77,7 @@ h2 {
 
 .mobileHeaderName {
 	padding-inline: 1rem 0;
-	font-size: 1.6rem;
+	font-size: 1.85rem;
 	font-family: 'Sigmar One', cursive;
 }
 
@@ -84,8 +85,7 @@ h2 {
 	font-family: 'Sigmar One', cursive;
 	/* padding-inline-start: 1rem; */
 	display: flex;
-	align-items: center;
-	font-weight: 400;
+	align-self: center;
 }
 
 .right {
