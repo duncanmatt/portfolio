@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import {
 	RedditOutlined,
@@ -19,26 +20,35 @@ function MobileHeader({ links }) {
 				<div className='menuWrapper'>
 					<div className='menuUpperContent'>
 						<h1 className='mobileHeaderName'>Matt Duncan</h1>
-						<CloseOutlined onClick={showMenu} style={{
-							fontSize: '1.2rem'
-						}} />
+						<CloseOutlined
+							onClick={showMenu}
+							style={{
+								fontSize: '1.2rem',
+							}}
+						/>
 					</div>
-					<div className='menuLowerContent'>
-						<span className='menuLinks'>
-							{links.map(link => (
-								<a
-									key={link.id}
-									href={link.url}
-									className='menuLink'
-									onClick={showMenu}>
-									<div>
-										{link.icon} {link.title}
-									</div>
-									<RightOutlined style={{ alignSelf: 'flex-end' }} />
-								</a>
-							))}
-						</span>
-					</div>
+					<AnimatePresence>
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							className='menuLowerContent'>
+							<span className='menuLinks'>
+								{links.map(link => (
+									<a
+										key={link.id}
+										href={link.url}
+										className='menuLink'
+										onClick={showMenu}>
+										<div>
+											{link.icon} {link.title}
+										</div>
+										<RightOutlined style={{ alignSelf: 'flex-end' }} />
+									</a>
+								))}
+							</span>
+						</motion.div>
+					</AnimatePresence>
 				</div>
 			) : (
 				<div className='mobileHeader'>
