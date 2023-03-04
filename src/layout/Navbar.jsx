@@ -86,7 +86,7 @@ function Navbar() {
 		{
 			id: 0,
 			title: 'Linkedin',
-			url: 'https://www.linkedin.com/in/matthew-duncan-bb8757209',
+			url: 'https://linkedin.com/in/matt-duncan-601997268',
 			icon: <LinkedinOutlined />,
 		},
 		{
