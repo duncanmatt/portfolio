@@ -8,6 +8,7 @@
 
 * {
 	box-sizing: border-box;
+	outline: 1px solid #f00 !important;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 	line-height: 1.15;
 	color: var(--font-color);
 	text-rendering: optimizeLegibility;
-	overflow-x: hidden;
+	max-width: 100%;
 }
 
 header {
@@ -45,7 +46,7 @@ li {
 .mobileHeader {
 	height: 60px;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #212529;
@@ -141,7 +142,7 @@ h2 {
 
 .intro {
 	display: block;
-	height: 600px;
+	height: inherit;
 	margin-block-end: 1rem;
 }
 
