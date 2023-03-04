@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-	padding-inline: 1rem;
+	padding-inline: 1rem 0;
 	padding-block: 0.5rem 1rem;
 	letter-spacing: 0.21rem;
 	font-family: 'Sigmar One', sans-serif;
@@ -263,7 +263,7 @@ h2 {
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-between;
-	padding-inline: 0 2rem;
+	padding-inline: 0 1rem;
 	margin-block-end: 1rem;
 }
 
