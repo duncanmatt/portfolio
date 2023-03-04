@@ -232,7 +232,6 @@ h2 {
 	align-items: center;
 	justify-content: space-evenly;
 	flex-basis: 100%;
-	min-width: 320px;
 	padding-block: 2rem 0.5rem;
 }
 
