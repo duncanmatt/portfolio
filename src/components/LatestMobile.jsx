@@ -42,11 +42,11 @@ function LatestMobile() {
 
 	return (
 		<div className='carouselWrapper'>
-			{isSmall ? (
-				<SmCarousel items={items} />
-			) : (
+			{/* {isSmall ? ( */}
+				{/* // <SmCarousel items={items} /> */}
+			{/* // ) : ( */}
 				<LgCarousel items={items} />
-			)}
+			{/* // )} */}
 		</div>
 	);
 }
