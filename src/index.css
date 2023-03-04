@@ -49,7 +49,6 @@ li {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #212529;
-	/* padding-block: 2px 4px; */
 }
 
 h1 {
@@ -171,7 +170,7 @@ h2 {
 
 .cardWrapper {
 	display: block;
-	width: 320px;
+	width: 100%;
 	height: 420px;
 	position: relative;
 	background-color: #f7f7f2;
