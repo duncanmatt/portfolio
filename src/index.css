@@ -28,6 +28,7 @@ body {
 header {
 	display: block;
 	height: 60px;
+	max-width: 100%;
 	line-height: 1.15;
 	color: #f7f7f2;
 }
@@ -42,15 +43,13 @@ li {
 }
 
 .mobileHeader {
-	/* position: sticky; */
 	height: 60px;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	/* letter-spacing: 0.111rem; */
 	background-color: #212529;
-	padding-block: 2px 4px;
+	/* padding-block: 2px 4px; */
 }
 
 h1 {
