@@ -8,7 +8,6 @@
 
 * {
 	box-sizing: border-box;
-	outline: 1px solid #f00 !important;
 }
 
 body {
@@ -239,6 +238,24 @@ h2 {
 	justify-content: space-evenly;
 	flex: 0;
 	padding-block: 2rem 0.5rem;
+	position: relative;
+}
+
+.carousel > button {
+	position: absolute;
+	display: flex;
+	user-select: none;
+	cursor: pointer;
+	z-index: 2;
+	color: var(--font-color);
+}
+
+.carouselPrev {
+	left: 10px;
+}
+
+.carouselNext {
+	right: 10px;
 }
 
 .carouselItem {

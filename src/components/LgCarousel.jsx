@@ -22,6 +22,11 @@ function LgCarousel({ items }) {
 					onClick={prevItem}>
 					<LeftOutlined />
 				</button>
+				<button
+					className='carouselNext'
+					onClick={nextItem}>
+					<RightOutlined />
+				</button>
 				<div className='carouselInner'>
 					{items.map(item => (
 						<div
@@ -33,11 +38,6 @@ function LgCarousel({ items }) {
 						</div>
 					))}
 				</div>
-				<button
-					className='carouselNext'
-					onClick={nextItem}>
-					<RightOutlined />
-				</button>
 			</div>
 		</div>
 	);

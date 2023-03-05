@@ -1,14 +1,11 @@
-import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from 'react-responsive';
 import bswPreview from '../layout/assets/bswPreview.png';
 import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
 import fbAppPreview from '../layout/assets/fbAppPreview.png';
 import hmPreview from '../layout/assets/hmPreview.png';
-import SmCarousel from "./SmCarousel";
-import LgCarousel from "./LgCarousel";
+import LgCarousel from './LgCarousel';
 
 function LatestMobile() {
-	const isSmall = useMediaQuery({ query: '(max-width: 400px)' });
-
 	const items = [
 		{
 			id: 1,
@@ -42,11 +39,7 @@ function LatestMobile() {
 
 	return (
 		<div className='carouselWrapper'>
-			{/* {isSmall ? ( */}
-				{/* // <SmCarousel items={items} /> */}
-			{/* // ) : ( */}
-				<LgCarousel items={items} />
-			{/* // )} */}
+			<LgCarousel items={items} />
 		</div>
 	);
 }
