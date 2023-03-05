@@ -1,9 +1,8 @@
-import { useMediaQuery } from 'react-responsive';
 import bswPreview from '../layout/assets/bswPreview.png';
 import ghFinderPreview from '../layout/assets/ghFinderPreview.png';
 import fbAppPreview from '../layout/assets/fbAppPreview.png';
 import hmPreview from '../layout/assets/hmPreview.png';
-import LgCarousel from './LgCarousel';
+import Carousel from './Carousel';
 
 function LatestMobile() {
 	const items = [
@@ -39,7 +38,7 @@ function LatestMobile() {
 
 	return (
 		<div className='carouselWrapper'>
-			<LgCarousel items={items} />
+			<Carousel items={items} />
 		</div>
 	);
 }
